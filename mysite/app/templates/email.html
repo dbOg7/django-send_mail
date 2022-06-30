@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block content %}
+    <h1>send mail</h1>
+
+    <form action="" method="POST" class="col-md-8 mx-auto">
+        {%csrf_token%}
+
+        <div class="mb-3">
+            <label for="from_email" class="form-label"></label>
+            <input type="email" class="form-control" name="from_email" id="from_email" placeholder="Your_email@mail.fr">
+        </div>
+
+        <div class="mb-3">
+            <label for="subject" class="form-label"></label>
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+        </div>
+
+        <div class="mb-3">
+            <label for="message" class="form-label"></label>
+            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Hello dbOg7 ..."></textarea>
+        </div>
+
+        <input type="submit" value="send" class="btn btn-dark">
+    </form>
+
+{% endblock %}
