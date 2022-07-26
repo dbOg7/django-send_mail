@@ -94,5 +94,13 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ADMIN_EMAIL = 'dbOg7@outlook.fr'
+#pour le test en console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#pour la production
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.example.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'youradress@example.com'
+# EMAIL_HOST_PASSWORD = 'yourpassword'
